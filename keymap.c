@@ -27,38 +27,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
         XXXXXXX, KC_Z, KC_X, KC_C, KC_V, KC_B,                                          KC_N, KC_M, KC_COMM, KC_DOT, DF(4), XXXXXXX,
         //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                        MT(MOD_LSFT, KC_TAB), TL_LOWR, KC_SPC,                                         KC_SPACE, TL_UPPR, MT(MOD_RSFT, KC_ESC)
+                        MT(MOD_LCTL, KC_TAB), TL_LOWR, KC_SPC,                                         MT(MOD_RSFT, KC_SPC), TL_UPPR, MT(MOD_RGUI, KC_ESC)
         //`--------------------------'  `--------------------------'
 
     ), [1] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         XXXXXXX, KC_1, KC_2, KC_3, KC_4, KC_5,                                           KC_6, KC_7, KC_8, KC_9, KC_0, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                          KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, LCTL(LWIN(KC_S)), LCTL(LWIN(KC_D)), LCTL(LWIN(KC_F)), XXXXXXX,                                          KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, XXXXXXX, XXXXXXX,
         //|--------+------//|--------+-----+//|--------+----------+--------|                    |--------+--------+--------+--------+--------+--------|
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LWIN(LSFT(KC_R)), XXXXXXX,
         //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                        MT(MOD_LSFT, KC_TAB), TL_LOWR, KC_SPC,                                         KC_RSFT, TL_UPPR, MT(MOD_RSFT, KC_ESC)
+                        MT(MOD_LCTL, KC_TAB), TL_LOWR, MT(MOD_LSFT, KC_SPC),                                         KC_RSFT, TL_UPPR, MT(MOD_RGUI, KC_ESC)
         //`--------------------------'  `--------------------------'
     ), [2] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                           KC_LBRC, KC_RBRC, KC_MINS, KC_EQL, KC_BSLS, XXXXXXX,
+        XXXXXXX, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,                                           KC_LBRC, KC_RBRC, KC_MINS, KC_EQL, KC_BSLS, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                          XXXXXXX, KC_GRV, KC_SCLN, KC_QUOT, KC_ENT, XXXXXXX,
+        XXXXXXX, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,                                          XXXXXXX, KC_GRV, KC_SCLN, KC_QUOT, KC_ENT, XXXXXXX,
         //|--------+------//|--------+-----+//|--------+----------+--------|                    |--------+--------+--------+--------+--------+--------|
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                         XXXXXXX, KC_COMM, KC_DOT, KC_SLSH, XXXXXXX, XXXXXXX,
+        XXXXXXX, KC_F11, KC_F12, XXXXXXX, XXXXXXX, XXXXXXX,                                         XXXXXXX, KC_COMM, KC_DOT, KC_SLSH, XXXXXXX, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                        MT(MOD_LSFT, KC_TAB), TL_LOWR, KC_LSFT,                                         KC_SPC, TL_UPPR, MT(MOD_RSFT, KC_ESC)
+                        MT(MOD_LCTL, KC_TAB), TL_LOWR, KC_LSFT,                                         MT(MOD_RSFT, KC_SPC), TL_UPPR, MT(MOD_RGUI, KC_ESC)
         //`--------------------------'  `--------------------------'
     ), [3] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        XXXXXXX, XXXXXXX, LCTL(LALT(KC_LEFT)), LCTL(LALT(KC_DOWN)), LCTL(LALT(KC_UP)), LCTL(LALT(KC_RIGHT)),                                           LCTL(LALT(KC_U)), LCTL(LALT(KC_I)), LCTL(LALT(KC_J)), LCTL(LALT(KC_K)), KC_MEDIA_PLAY_PAUSE, XXXXXXX,
+        XXXXXXX, LCTL(KC_T), LCTL(LALT(KC_LEFT)), LCTL(LALT(KC_DOWN)), LCTL(LALT(KC_UP)), LCTL(LALT(KC_RIGHT)),                                           LCTL(LALT(KC_U)), LCTL(LALT(KC_I)), LCTL(LALT(KC_J)), LCTL(LALT(KC_K)), KC_MEDIA_PLAY_PAUSE, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        XXXXXXX, XXXXXXX, KC_LCTL, KC_LALT, KC_LWIN, LCTL(LALT(KC_ENT)),                                          XXXXXXX, KC_RWIN, KC_RALT, KC_RCTL, KC_AUDIO_VOL_UP, XXXXXXX,
+        XXXXXXX, LCTL(KC_B), KC_LCTL, KC_LALT, KC_LWIN, LCTL(LALT(KC_ENT)),                                          XXXXXXX, KC_RWIN, KC_RALT, KC_RCTL, KC_AUDIO_VOL_UP, XXXXXXX,
         //|--------+------//|--------+-----+//|--------+----------+--------|                    |--------+--------+--------+--------+--------+--------|
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                         LWIN(KC_1), LWIN(KC_2), LWIN(KC_3), LWIN(KC_4), KC_AUDIO_VOL_DOWN, XXXXXXX,
+        XXXXXXX, LCTL(KC_DOT), LCTL(KC_1), LCTL(KC_2), LCTL(KC_3), LCTL(KC_4),                                         LWIN(KC_1), LWIN(KC_2), LWIN(KC_3), LWIN(KC_4), KC_AUDIO_VOL_DOWN, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                        MT(MOD_LSFT, KC_TAB), TL_LOWR, KC_SPC,                                         KC_SPC, TL_UPPR, MT(MOD_RSFT, KC_ESC)
+                        KC_TAB, TL_LOWR, KC_SPC,                                         KC_SPC, TL_UPPR, MT(MOD_RSFT, KC_ESC)
         //`--------------------------'  `--------------------------'
     ), [4] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -66,9 +66,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|-----//|-----------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
         XXXXXXX,KC_LCTL,KC_A, KC_S, KC_D, KC_F,                                          KC_H, KC_J, KC_K, KC_L, KC_SCLN, XXXXXXX,
         //|-----//|-----------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        XXXXXXX,DF(0), KC_Z, KC_X, KC_C, KC_V,                                          KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, XXXXXXX,
+        XXXXXXX, KC_B, KC_Z, KC_X, KC_C, KC_V,                                          KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                        KC_LSFT, KC_B, KC_SPC,                                         KC_ENT, KC_ENT, KC_RALT
+                        KC_LSFT, TL_LOWR, KC_SPC,                                         KC_ENT, KC_ENT, DF(0)
         //`--------------------------'  `--------------------------'
 )};
 
